@@ -1,0 +1,268 @@
+@import "utils";
+
+.header {
+  position: relative;
+
+  max-width: $desktop-width;
+  min-height: 670px; //check if I need it
+  margin: 0 auto;
+
+  padding: 20px 135px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    bottom: 59%;
+    left: 0;
+    z-index: -1;
+
+    background-color: $yellow-light-color;
+
+    transform: skewY(-20deg);
+  }
+
+  &__container {
+    position: relative;
+    max-width: $desktop-width - 135px;
+  }
+
+  &__toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+  }
+
+  &__toggler--label {
+    width: $burger-size;
+    height: $burger-size;
+  }
+
+  &__toggler--label::after {
+    content: url(../images/icons/mobile-menu/burger-menu.svg);
+    display: block;
+    position: absolute;
+    width: $burger-size;
+    height: $burger-size;
+    top: 0;
+    right: 0;
+  }
+
+  &__mob-menu {
+    position: fixed;
+    z-index: 2;
+    top: -400%;
+    right: 0;
+    width: $mob-menu-width;
+
+    min-height: 670px;
+
+    display: flex;
+
+    background-color: $turquoise-color;
+    color: $mobile-menu-text;
+  }
+
+  &__top-menu {
+    max-width: 870px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 90px;
+  }
+
+  &__logo-link {
+    display: block;
+    height: 36px;
+  }
+
+  &__logo {
+    width: 133px;
+    height: 36px;
+  }
+
+  &__basket {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: 0;
+
+      display: block;
+
+      width: $basket-icon-size;
+      height: $basket-icon-size;
+
+      background: url(../images/icons/basket.svg) center no-repeat;
+    }
+  }
+
+  &__middle {
+    position: relative;
+    display: flex;
+
+    max-width: $desktop-width - 135px;
+  }
+
+  &__description {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: 550px;
+  }
+
+  &__headline {
+    max-width: 422px;
+  }
+
+  &__opacity-text {
+    color: transparent;
+    -webkit-text-stroke-color: $turquoise-color;
+    -webkit-text-stroke-width: 0.01mm;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $header-img-desktop-size;
+    height: $header-img-desktop-size;
+  }
+
+  &__price {
+    width: 150px;
+
+    margin-bottom: 44px;
+  }
+
+  &__amount {
+    position: relative;
+
+    font-family: $main-font;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: bold;
+    color: $price-color;
+  }
+
+  &__promotion {
+    font-family: $main-font;
+    font-size: 14px;
+    color: $middle-text-color;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    font-family: $main-font;
+    font-size: 12px;
+    color: $turquoise-color;
+    writing-mode: vertical-rl;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -55px;
+      right: calc(50% - 5px);
+
+      display: block;
+
+      width: 9px;
+      height: 44px;
+
+      background: url(../images/header/long-arrow.svg) center no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    padding: 20px 90px;
+
+    &__top-menu {
+      max-width: 600px;
+    }
+
+    &__description {
+      max-width: 422px;
+    }
+  }
+
+  @media screen and (max-width: 1020px) {
+    padding: 20px 48px;
+
+    &__img {
+      width: $header-img-ipad-size;
+      height: $header-img-ipad-size;
+    }
+
+    &__price {
+      margin-right: 60px;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+
+    &__basket,
+    &__nav {
+      display: none;
+    }
+
+    &__toggler--label {
+      display: block;
+    }
+
+    &__toggler:checked ~ &__mob-menu {
+      top: 0;
+    }
+
+    &__toggler:checked + &__toggler--label::after {
+      content: url(../images/icons/mobile-menu/x.svg);
+      top: 1855%;
+      right: 8%;
+      z-index: 4;
+
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 10px;
+
+    &__top-menu {
+      margin-bottom: 360px;
+    }
+
+    &__img {
+      top: -345px;
+      right: calc(50% - 160px);
+    }
+
+    &__description {
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    &__link {
+      left: 90%;
+    }
+
+    &__toggler:checked + &__toggler--label::after {
+      right: 75%;
+    }
+  }
+}

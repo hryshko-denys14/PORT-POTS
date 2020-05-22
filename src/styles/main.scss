@@ -1,7 +1,23 @@
+//global styles
 @import "utils";
-@import "fonts";
 @import "typography";
+@import "reset";
+
+//header
+@import "header";
+@import "nav";
+@import "button";
+@import "mob-menu";
+
+html {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $small-text-color;
+
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  background: $mobile-menu-text;
 }

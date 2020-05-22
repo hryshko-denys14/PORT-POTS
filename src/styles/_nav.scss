@@ -1,0 +1,17 @@
+.nav {
+  @extend %p;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 64px;
+  }
+
+  @media screen and  (max-width: 1280px) {
+    &__item:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

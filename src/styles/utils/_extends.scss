@@ -1,4 +1,42 @@
+%title,
+%h1,
+%h2,
+%h3,
+%h4 {
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
 %h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-size: 64px;
+  line-height: 1;
+  color: $turquoise-color;
+}
+
+%h2 {
+  font-size: 58px;
+}
+
+%h3 {
+  font-size: 36px;
+}
+
+%h4 {
+  font-size: 24px;
+}
+
+%h5 {
+  font-size: 18px;
+}
+
+%p {
+  font-family: $main-font;
+  font-weight: 600;
+  color: $middle-text-color;
+}
+
+@media screen and (max-width: 720px) {
+  %h1 {
+    font-size: 36px;
+  }
 }
