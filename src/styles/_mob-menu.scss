@@ -29,7 +29,7 @@
     &::after {
 
       top: 15%;
-      right: 48%;
+      right: 37%;
 
       background-color: $red-color;
       border-radius: 50%;
@@ -39,35 +39,21 @@
       content: "0";
       z-index: 2;
       top: 14%;
-      right: 110px;
+      right: 84px;
     }
   }
 
   &__link {
     display: block;
 
-    font-size: 20px;
+    font-size: 32px;
   }
 
-  &__close {
-    position: absolute;
-    bottom: 20%;
-    right: 5%;
+  @media screen and (max-width: 500px) {
 
-    font-size: 12px;
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: calc(50% - 1px);
-      left: -50px;
-      display: block;
-
-      width: 44px;
-      height: 1px;
-      background-color: #fff;
+    &__link {
+      font-size: 24px;
     }
+
   }
 }
