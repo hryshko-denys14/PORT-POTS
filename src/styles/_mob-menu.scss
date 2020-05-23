@@ -49,11 +49,14 @@
     font-size: 32px;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $sixth-break-point) {
 
     &__link {
       font-size: 24px;
     }
 
+    &__item:first-child::before {
+      right: 80px;
+    }
   }
 }

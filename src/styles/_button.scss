@@ -1,3 +1,5 @@
+@import "utils";
+
 .button {
   position: relative;
   display: block;
@@ -31,7 +33,7 @@
     margin-right: 70px;
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: $forth-break-point) {
     border: none;
     background-color: $yellow-color;
   }

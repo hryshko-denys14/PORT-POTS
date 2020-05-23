@@ -1,0 +1,177 @@
+@import "utils";
+
+.customers {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $heading-color;
+
+    margin-bottom: 34px;
+  }
+
+  &__description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 470px;
+  }
+
+  &__notification {
+    position: relative;
+    color: $heading-color;
+
+    margin-bottom: 39px;
+
+    &::after {
+      content: "*";
+      position: absolute;
+      top: -7px;
+      left: -30px;
+      display: block;
+
+      font-size: 36px;
+      width: 36px;
+      height: 35px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+  }
+
+  &__slogan {
+    position: relative;
+    max-width: 350px;
+
+    margin-bottom: 11px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      right: 95px;
+      display: block;
+
+      width: 1px;
+      height: 47px;
+      background-color: $heading-color;
+
+      transform: rotate(22deg);
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    left: -68px;
+    font-size: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      display: block;
+
+      width: 1px;
+      height: 47px;
+      background-color: $heading-color;
+
+      transform: rotate(22deg);
+    }
+  }
+
+  &__text {
+    position: relative;
+    max-width: 350px;
+  }
+
+  &__side-text {
+    position: absolute;
+    top: 5%;
+    right: -83px;
+
+    font-size: 12px;
+    line-height: 1;
+    color: $side-text-color;
+    letter-spacing: 0.22em;
+
+    transform: rotate(90deg);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      right: 70px;
+      display: block;
+
+      width: 65px;
+      height: 1px;
+      background-color: $side-text-color;
+    }
+  }
+
+  @media screen and (max-width: $second-break-point) {
+
+    &__img {
+      width: $customers-img-middle-size;
+      height: $customers-img-middle-size;
+    }
+
+    &__slogan {
+      max-width: 255px;
+
+      &::before {
+        right: 140px;
+      }
+    }
+
+    &__text {
+      max-width: 255px;
+    }
+
+    &__number {
+      left: -38px;
+    }
+
+    &__side-text {
+      right: -50px;
+    }
+  }
+
+  @media screen and (max-width: $third-break-point) {
+
+    &__side-text {
+      right: -30px;
+    }
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__question {
+      margin-bottom: 26px;
+      padding-right: 85px;
+    }
+
+    &__img,
+    &__notification,
+    &__slogan::before {
+      display: none;
+    }
+
+    &__number {
+      top: -50px;
+      left: 15px;
+    }
+  }
+}

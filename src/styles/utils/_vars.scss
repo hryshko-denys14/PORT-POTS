@@ -5,7 +5,7 @@ $title-font: "Bebas Neue", cursive, sans-serif;
 //color
 $mobile-menu-text: #f8f8f8;
 $small-text-color: #000;
-$price-color: #333;
+$heading-color: #333;
 $middle-text-color: #4f4f4f;
 $turquoise-color: #03839e;
 $yellow-color: #ffe339;
@@ -14,13 +14,23 @@ $grey-color: #b3b3b3;
 $grey-light-color: #f8f8f8;
 $red-color: #eb5757;
 $button-color: #121212;
+$side-text-color: #828282;
 
 //size
 $desktop-width: 1440px;
 $basket-icon-size: 30px;
 $header-img-desktop-size: 500px;
 $header-img-ipad-size: 320px;
+$customers-img-middle-size: 284px;
 $arrow-width: 25px;
 $burger-size: 32px;
 $mob-menu-width: 70%;
 $mob-menu-number-width: 13px;
+
+//break-points
+$first-break-point: 1280px;
+$second-break-point: 1020px;
+$third-break-point: 780px;
+$forth-break-point: 720px;
+$fifth-break-point: 600px;
+$sixth-break-point: 500px;
