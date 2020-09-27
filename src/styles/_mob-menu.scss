@@ -1,5 +1,6 @@
 .mob-menu {
   font-family: $main-font;
+  padding: 50px;
 
   &__list {
     margin: auto;
@@ -47,6 +48,40 @@
     display: block;
 
     font-size: 32px;
+  }
+
+  &__close-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 8%;
+    right: 50px;
+  }
+
+  &__close {
+    transform: rotate(-90deg);
+
+    margin-bottom: 90px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -55px;
+      width: 44px;
+      height: 1px;
+
+      background-color: $white;
+    }
+  }
+
+  &__close-btn {
+    align-self: center;
+    background-image: url(../images/icons/mobile-menu/x.svg);
+    width: 16px;
+    height: 16px;
   }
 
   @media screen and (max-width: $sixth-break-point) {

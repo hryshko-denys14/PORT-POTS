@@ -21,27 +21,18 @@
     transform: skewY(-20deg);
   }
 
-  &__toggler {
-    position: absolute;
-    top: 0;
-    right: 0;
-
+  &__burger-btn {
     display: none;
-  }
 
-  &__toggler--label {
-    width: $burger-size;
-    height: $burger-size;
-  }
-
-  &__toggler--label::after {
-    content: url(../images/icons/mobile-menu/burger-menu.svg);
-    display: block;
     position: absolute;
+    top: 0;
+    right: 5px;
     width: $burger-size;
     height: $burger-size;
-    top: 0;
-    right: 0;
+
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/icons/mobile-menu/burger-menu.svg);
   }
 
   &__mob-menu {
@@ -51,7 +42,7 @@
     right: 0;
     width: $mob-menu-width;
 
-    min-height: 670px;
+    height: 100vh;
 
     display: flex;
 
@@ -59,7 +50,7 @@
     color: $mobile-menu-text;
 
     transform: translateX(500%);
-    transition: transform 0.3s;
+    transition: transform 0.5s;
   }
 
   &__top-menu {
@@ -197,7 +188,6 @@
   }
 
   @media screen and (max-width: $second-break-point) {
-
     &__img {
       width: $header-img-ipad-size;
       height: $header-img-ipad-size;
@@ -209,34 +199,17 @@
   }
 
   @media screen and (max-width: $third-break-point) {
+    &__burger-btn {
+      display: block;
+    }
 
     &__basket,
     &__nav {
       display: none;
     }
-
-    &__toggler--label {
-      display: block;
-    }
-
-    &__toggler:checked ~ &__mob-menu {
-      transform: translateX(0);
-    }
-
-    //"Close toggle" doesn't work with position fixed
-
-    // &__toggler:checked + &__toggler--label::after {
-    //   content: url(../images/icons/mobile-menu/x.svg);
-    //   top: 235%;
-    //   right: 270%;
-    //   z-index: 3;
-
-    //   width: 16px;
-    //   height: 16px;
-    // }
   }
 
-  @media screen and (max-width: $forth-break-point) {
+  @media screen and (max-width: $fourth-break-point) {
     padding: 10px;
 
     &__top-menu {
@@ -258,8 +231,8 @@
     }
 
     &__link {
-      left: 90%;
-      bottom: 52px;
+      left: 95%;
+      bottom: 20px;
     }
 
     &__headline {
@@ -272,12 +245,6 @@
 
     &__price {
       margin-bottom: 20px;
-    }
-  }
-
-  @media screen and  (max-width: $first-break-point) {
-    &__link {
-      left: 100%;
     }
   }
 }

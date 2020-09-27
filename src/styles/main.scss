@@ -30,3 +30,8 @@ body {
   max-width: $desktop-width;
   margin: 0 auto;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+}

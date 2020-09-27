@@ -151,6 +151,13 @@
     }
   }
 
+  @media screen and (max-width: $fourth-break-point) {
+
+    &__side-text {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: $fifth-break-point) {
 
     &__container {
