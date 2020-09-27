@@ -1,7 +1,5 @@
 'use strict';
 
-//header
-
 const burgerButton = document.querySelector('.header__burger-btn');
 const mobileMenu = document.querySelector('.header__mob-menu');
 const closeButton = document.querySelector('.mob-menu__close-btn');

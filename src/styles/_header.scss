@@ -176,7 +176,7 @@
     }
   }
 
-  @media screen and (max-width: $first-break-point) {
+  @media screen and (max-width: $second-break-point) {
 
     &__top-menu {
       max-width: 600px;
@@ -187,7 +187,7 @@
     }
   }
 
-  @media screen and (max-width: $second-break-point) {
+  @media screen and (max-width: $third-break-point) {
     &__img {
       width: $header-img-ipad-size;
       height: $header-img-ipad-size;
@@ -198,7 +198,7 @@
     }
   }
 
-  @media screen and (max-width: $third-break-point) {
+  @media screen and (max-width: $fourth-break-point) {
     &__burger-btn {
       display: block;
     }
@@ -209,8 +209,11 @@
     }
   }
 
-  @media screen and (max-width: $fourth-break-point) {
-    padding: 10px;
+  @media screen and (max-width: $fifth-break-point) {
+
+    &::after {
+      background-color: transparent;
+    }
 
     &__top-menu {
       margin-bottom: 360px;
@@ -222,7 +225,7 @@
     }
 
     &__description {
-      margin: 0 auto;
+      margin: 0;
       align-items: flex-start;
     }
 

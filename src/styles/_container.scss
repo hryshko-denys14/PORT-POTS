@@ -5,15 +5,15 @@
   max-width: 1170px;
   margin: 20px 135px;
 
-  @media screen and (max-width: $first-break-point) {
+  @media screen and (max-width: $second-break-point) {
     margin: 20px 90px;
   }
 
-  @media screen and (max-width: $second-break-point) {
+  @media screen and (max-width: $third-break-point) {
     margin: 20px 48px;
   }
 
-  @media screen and (max-width: $third-break-point) {
-    margin: 10px;
+  @media screen and (max-width: $fourth-break-point) {
+    margin: 15px 30px;
   }
 }
