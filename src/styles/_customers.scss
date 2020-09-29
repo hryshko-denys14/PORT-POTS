@@ -10,13 +10,13 @@
   &__section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   &__section--1 {
     flex-direction: row;
     margin-bottom: 80px;
     width: 100%;
+    justify-content: space-between;
   }
 
   &__section--2,
@@ -34,6 +34,7 @@
   &__section--3 {
     align-items: center;
     max-width: 500px;
+    margin-bottom: 200px;
   }
 
   &__img {
@@ -194,7 +195,7 @@
   }
 
   &__left-text {
-    bottom: 0;
+    bottom: 130px;
     left: -10%;
 
     &::before {
