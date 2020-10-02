@@ -16,6 +16,7 @@
 
   &__items {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
@@ -25,6 +26,11 @@
     align-items: center;
 
     max-width: 370px;
+    margin-bottom: 50px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
   }
 
   &__img {
@@ -37,5 +43,59 @@
 
   &__name {
     margin-bottom: 22px;
+  }
+
+  &__name,
+  &__description {
+    text-align: center;
+  }
+
+  @media screen and (max-width: $first-break-point) {
+    &__items {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: $third-break-point) {
+    &__items {
+      justify-content: space-between;
+    }
+
+    &__item {
+      max-width: 220px;
+    }
+
+    &__img {
+      width: 220px;
+      height: 220px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: $fourth-break-point) {
+    &__items {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: $sixth-break-point) {
+    &__title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      max-width: 260px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__img {
+      width: 260px;
+      height: 260px;
+      margin-bottom: 20px;
+    }
   }
 }
