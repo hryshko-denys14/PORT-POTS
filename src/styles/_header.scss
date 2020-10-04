@@ -210,11 +210,6 @@
   }
 
   @media screen and (max-width: $fifth-break-point) {
-
-    &::after {
-      background-color: transparent;
-    }
-
     &__top-menu {
       margin-bottom: 360px;
     }
@@ -248,6 +243,12 @@
 
     &__price {
       margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: $seventh-break-point) {
+    &::after {
+      background-color: transparent;
     }
   }
 }
