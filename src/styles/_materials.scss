@@ -1,0 +1,104 @@
+.materials {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 1083px;
+  background-image: url(../images/main/materials.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  padding: 135px;
+
+  &__title {
+    position: relative;
+    top: -280px;
+    font-size: 139px;
+    line-height: 139px;
+    letter-spacing: 0.12em;
+  }
+
+  &__text-wrapper {
+    position: relative;
+    top: -375px;
+    max-width: 470px;
+    align-self: flex-end;
+  }
+
+  &__semi-title {
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $middle-text-color;
+  }
+
+  &__description--emphasize {
+    font-weight: bold;
+  }
+
+  &__circle,
+  &__close {
+    position: absolute;
+    bottom: 15%;
+    left: 18%;
+
+    width: 51px;
+    height: 51px;
+
+    border-radius: 50%;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+
+      background-color: $white;
+    }
+
+    &::before {
+      top: calc(50% - 1px);
+      left: calc(50% - 5px);
+
+      width: 11px;
+      height: 1px;
+    }
+  }
+
+  &__circle {
+    background-color: $red-color;
+
+    &::after {
+      top: calc(50% - 6px);
+      left: 50%;
+
+      width: 1px;
+      height: 11px;
+    }
+  }
+
+  &__close {
+    display: none;
+    z-index: 2;
+    background: rgba(36, 35, 35, 0.75);
+    opacity: 0.65;
+    backdrop-filter: blur(12px);
+  }
+
+  &__hidden-text {
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    display: none;
+
+    max-width: 300px;
+    padding: 35px 45px;
+
+    background: rgba(0, 0, 0, 0.41);
+    color: $mobile-menu-text;
+    backdrop-filter: blur(34px);
+  }
+}
