@@ -1,6 +1,6 @@
 .team {
   margin-bottom: 200px;
-  
+
   &__heading {
     margin-bottom: 220px;
 
@@ -146,19 +146,11 @@
     }
   }
 
+  @media screen and (max-width: $fifth-break-point) {
+    margin-bottom: 70px;
+  }
+
   @media screen and (max-width: $seventh-break-point) {
-    // &__heading {
-    //   margin-bottom: 60px;
-    // }
-
-    // &__highlight-text {
-    //   display: none;
-    // }
-
-    // &__content-wrapper {
-    //   align-items: center;
-    //   flex-direction: column-reverse;
-    // }
 
     &__img {
       width: 320px;

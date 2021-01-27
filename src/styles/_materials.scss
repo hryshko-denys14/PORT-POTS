@@ -2,18 +2,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1440px;
-  height: 1083px;
-  background-image: url(../images/main/materials.png);
+  max-width: 1440px;
+  max-height: 1083px;
+  /* stylelint-disable-next-line */
+  background: linear-gradient(180deg, #f8f8f8 0%, rgba(255, 255, 255, 0) 30.93%), url(../images/main/materials.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   padding: 135px;
 
   &__title {
     position: relative;
-    top: -280px;
+    top: -335px;
     font-size: 139px;
     line-height: 139px;
     letter-spacing: 0.12em;
@@ -21,7 +22,7 @@
 
   &__text-wrapper {
     position: relative;
-    top: -375px;
+    top: -460px;
     max-width: 470px;
     align-self: flex-end;
   }
@@ -78,6 +79,21 @@
       width: 1px;
       height: 11px;
     }
+
+    &--second {
+      left: 65%;
+      bottom: 20%;
+    }
+
+    &--third {
+      bottom: 40%;
+      left: 35%;
+    }
+
+    &--fourth {
+      bottom: 35%;
+      left: 85%;
+    }
   }
 
   &__close {
@@ -86,12 +102,27 @@
     background: rgba(36, 35, 35, 0.75);
     opacity: 0.65;
     backdrop-filter: blur(12px);
+
+    &--second {
+      left: 65%;
+      bottom: 20%;
+    }
+
+    &--third {
+      bottom: 40%;
+      left: 35%;
+    }
+
+    &--fourth {
+      bottom: 35%;
+      left: 85%;
+    }
   }
 
   &__hidden-text {
     position: absolute;
     bottom: 5%;
-    left: 25%;
+    left: 22%;
     display: none;
 
     max-width: 300px;
@@ -100,5 +131,145 @@
     background: rgba(0, 0, 0, 0.41);
     color: $mobile-menu-text;
     backdrop-filter: blur(34px);
+
+    &--second {
+      left: 44%;
+      bottom: 18%;
+    }
+
+    &--third {
+      bottom: 44%;
+      left: 39%;
+    }
+
+    &--fourth {
+      bottom: 37%;
+      left: 63%;
+    }
+  }
+
+  .slider {
+    display: none;
+    width: 100%;
+    min-height: 160px;
+    padding: 20px;
+    margin-top: 150px;
+
+    background: rgba(0, 0, 0, 0.45);
+    mix-blend-mode: normal;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(34px);
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+      color: #f8f8f8;
+    }
+
+    &__btn {
+      width: 7px;
+      height: 7px;
+      margin-right: 7px;
+
+      background-image: url(../images/main/slider-btn.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &--active {
+        background-image: url(../images/main/slider-btn-active.svg);
+      }
+    }
+
+    @media screen and (max-width: $fifth-break-point) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media screen and (max-width: $seventh-break-point) {
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $second-break-point) {
+    max-width: 1280px;
+    max-height: 1283px;
+
+    &__title {
+      top: -350px;
+      left: -65px;
+      max-width: 800px;
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    &__text-wrapper {
+      top: -415px;
+      right: -50px;
+      max-width: 390px;
+    }
+
+    &__hidden-text {
+      bottom: 30%;
+      left: 1%;
+
+      &--second {
+        left: 35%;
+        bottom: 5%;
+      }
+
+      &--third {
+        bottom: 52%;
+        left: 35%;
+      }
+
+      &--fourth {
+        bottom: 47%;
+        left: 70%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $third-break-point) {
+    &__title {
+      top: -350px;
+      left: -65px;
+      max-width: 700px;
+      font-size: 58px;
+      line-height: 58px;
+    }
+
+    &__text-wrapper {
+      right: -70px;
+      max-width: 280px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+    background-size: contain;
+    padding: 35px;
+
+    &__title {
+      top: -135px;
+      left: 10px;
+      max-width: 100%;
+    }
+
+    &__text-wrapper {
+      display: none;
+    }
+
+    &__circle {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $seventh-break-point) {
+    padding: 0;
   }
 }
