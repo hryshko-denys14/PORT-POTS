@@ -51,6 +51,8 @@
 
     border-radius: 50%;
 
+    cursor: pointer;
+
     &::after,
     &::before {
       content: "";
@@ -176,6 +178,7 @@
       background-repeat: no-repeat;
       background-size: cover;
 
+      cursor: pointer;
       &--active {
         background-image: url(../images/main/slider-btn-active.svg);
       }

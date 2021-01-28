@@ -1,8 +1,9 @@
 .footer {
   display: flex;
   flex-direction: column;
-  max-width: 1600px;
 
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 35px 74px;
 
   &__content {
@@ -22,12 +23,28 @@
     width: 230px;
   }
 
+  &__social-link {
+    transition: transform $transition-time;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
   &__info {
     max-width: 160px;
+    font-family: $main-font;
+    font-size: 16px;
+    color: #000;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__logo {
     align-self: center;
+    cursor: pointer;
   }
 
   &__mobile-text {

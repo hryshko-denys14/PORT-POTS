@@ -139,10 +139,16 @@
   }
 
   &__info {
+    font-family: $main-font;
+    font-size: 16px;
     color: #000;
 
     &:last-child {
       max-width: 270px;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 

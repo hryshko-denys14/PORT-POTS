@@ -15,6 +15,12 @@
     max-width: 270px;
     max-height: 300px;
 
+    transition: transform $transition-time-long;
+
+    &:hover {
+      transform: scale(1.1) rotate(65.1deg) translateX(100px);
+    }
+
     &:nth-child(1) {
       top: -45px;
       left: -40px;
@@ -49,6 +55,23 @@
       top: -190px;
       left: -10px;
       z-index: 1;
+    }
+
+    &:nth-child(1):hover,
+    &:nth-child(2):hover {
+      transform: scale(1.1) rotate(45.1deg) translateX(100px);
+    }
+
+    &:nth-child(3):hover,
+    &:nth-child(4):hover {
+      transform: scale(1.1) rotate(0deg) translateX(100px);
+
+    }
+
+    &:nth-child(5):hover,
+    &:nth-child(6):hover {
+      transform: scale(1.1) rotate(25deg) translateX(100px) translateY(-100px);
+
     }
   }
 
@@ -106,6 +129,11 @@
 
     color: $button-color;
     border: 1px solid $turquoise-color;
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: $yellow-color;
+    }
   }
 
   &__promotion {
@@ -193,6 +221,12 @@
 
     &__btn {
       margin-bottom: 33px;
+    }
+  }
+  @media screen and (max-width: $fourth-break-point) {
+    &__btn:hover {
+      background-color: inherit;
+      border: 1px solid $turquoise-color;
     }
   }
 

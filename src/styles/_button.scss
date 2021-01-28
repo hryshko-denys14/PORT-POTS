@@ -16,6 +16,8 @@
   text-transform: uppercase;
   color: $button-color;
 
+  cursor: pointer;
+
   &:after {
     content: "";
     position: absolute;
@@ -31,10 +33,19 @@
 
   &--header {
     margin-right: 70px;
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: $yellow-color;
+    }
   }
 
   @media screen and (max-width: $fourth-break-point) {
     border: none;
     background-color: $yellow-color;
+
+    &:hover {
+      background-color: inherit;
+    }
   }
 }
