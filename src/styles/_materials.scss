@@ -5,7 +5,7 @@
   max-width: 1440px;
   max-height: 1083px;
   /* stylelint-disable-next-line */
-  background: linear-gradient(180deg, #f8f8f8 0%, rgba(255, 255, 255, 0) 30.93%), url(../images/main/materials.png);
+  background: linear-gradient(180deg, $mobile-menu-text 0%, rgba(255, 255, 255, 0) 30.93%), url(../images/main/materials.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
