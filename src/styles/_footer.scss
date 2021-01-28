@@ -1,0 +1,58 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+
+  padding: 35px 74px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__address,
+  &__about-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+  }
+
+  &__info {
+    max-width: 160px;
+  }
+
+  &__logo {
+    align-self: center;
+  }
+
+  &__mobile-text {
+    display: none;
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+    align-items: center;
+    padding: 70px 35px;
+
+    &__content {
+      margin-bottom: 41px;
+    }
+
+    &__address,
+    &__about-us {
+      display: none;
+    }
+
+    &__logo {
+      margin-bottom: 15px;
+    }
+
+    &__mobile-text {
+      display: block;
+    }
+  }
+}

@@ -53,6 +53,8 @@
   }
 
   &__content {
+    position: relative;
+    top: -100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,10 +216,18 @@
       flex-direction: column;
       align-items: center;
     }
+
+    &__condition {
+      margin-bottom: 50px;
+    }
   }
 
   @media screen and (max-width: $seventh-break-point) {
     padding: 30px 35px;
+
+    &__content {
+      top: 0;
+    }
 
     &__features {
       justify-items: flex-start;

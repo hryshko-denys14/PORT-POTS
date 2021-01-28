@@ -17,6 +17,10 @@
 @import "materials";
 @import "size";
 @import "advantages";
+@import "contacts";
+
+//footer
+@import "footer";
 
 html {
   font-family: "Bebas Neue", cursive, sans-serif;
@@ -39,4 +43,13 @@ body {
 button {
   background-color: transparent;
   border: none;
+}
+
+input {
+  border: none;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px $yellow-color inset;
 }

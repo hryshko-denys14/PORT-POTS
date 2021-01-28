@@ -1,0 +1,152 @@
+.contacts {
+  position: relative;
+  top: -180px;
+  z-index: 8;
+  min-height: 620px;
+
+  width: 100%;
+  padding: 28px 220px;
+
+  background: url(../images/main/Rectangle.png) no-repeat left top;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -107px;
+    right: -60px;
+
+    width: 210px;
+    height: 180px;
+
+    background-image: url(../images/main/mail-stamp.png);
+  }
+
+  &__heading {
+    letter-spacing: 0.15em;
+  }
+
+  &__description {
+    margin-bottom: 27px;
+    font-family: $main-font;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: $second-break-point) {
+    padding: 45px 35px;
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+    height: 320px;
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__heading {
+      margin-bottom: 14px;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: $seventh-break-point) {
+    top: 0;
+    margin-bottom: 250px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+
+  &__heading {
+    margin-bottom: 23px;
+  }
+
+  &__input {
+    width: 370px;
+    margin-bottom: 20px;
+    padding: 4px;
+
+    background: transparent;
+    border-bottom: 1px solid rgba(34, 24, 24, 0.3);
+
+    &::placeholder {
+      color: $middle-text-color;
+    }
+  }
+
+  &__btn {
+    width: 100px;
+    align-self: center;
+    margin-top: 39px;
+    padding: 10px;
+
+    border-bottom: 1px dotted $heading-color;
+  }
+
+  @media screen and (max-width: $third-break-point) {
+    max-width: 370px;
+
+    &__input {
+      width: 340px;
+    }
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 85px;
+    justify-content: center;
+
+    &__input {
+      width: 260px;
+    }
+  }
+
+  @media screen and (max-width: $seventh-break-point) {
+    top: 0;
+  }
+}
+
+.details {
+  max-width: 50%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 21px;
+  }
+
+  &__heading {
+    margin-bottom: 4px;
+
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: rgba(0, 0, 0, 0.39);
+  }
+
+  &__info {
+    color: #000;
+
+    &:last-child {
+      max-width: 270px;
+    }
+  }
+
+  @media screen and (max-width: $fifth-break-point) {
+    max-width: 100%;
+  }
+}
