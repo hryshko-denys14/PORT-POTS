@@ -1,9 +1,27 @@
+/* eslint-disable no-shadow */
 /* eslint-disable max-len */
 'use strict';
+
+let isMobileMenuOpen = false;
+
+function closeMobileMenu() {
+  mobileMenu.style.transform = 'translateX(500%)';
+  isMobileMenuOpen = false;
+}
+
+function handleOutsideClick(event) {
+  const classList = event.target.classList;
+
+  if (isMobileMenuOpen && !classList.contains('header__mob-menu')
+        && !classList.contains('header__burger-btn')) {
+    closeMobileMenu();
+  }
+}
 
 const burgerButton = document.querySelector('.header__burger-btn');
 const mobileMenu = document.querySelector('.header__mob-menu');
 const closeButton = document.querySelector('.mob-menu__close-btn');
+const mobileMenuButtons = document.getElementsByClassName('mob-menu__link');
 
 const materialsButtons = document.getElementsByClassName('materials__circle');
 const materialsCloses = document.getElementsByClassName('materials__close');
@@ -11,11 +29,18 @@ const materialsTexts = document.getElementsByClassName('materials__hidden-text')
 
 burgerButton.onclick = () => {
   mobileMenu.style.transform = 'translateX(0)';
+  isMobileMenuOpen = true;
 };
 
-closeButton.onclick = () => {
-  mobileMenu.style.transform = 'translateX(500%)';
-};
+closeButton.onclick = closeMobileMenu();
+
+for (let i = 0; i < mobileMenuButtons.length; i++) {
+  mobileMenuButtons[i].onclick = () => {
+    closeMobileMenu();
+  };
+}
+
+document.addEventListener('click', handleOutsideClick);
 
 for (let i = 0; i < materialsButtons.length; i++) {
   materialsButtons[i].onclick = () => {
