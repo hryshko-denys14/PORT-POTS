@@ -222,6 +222,33 @@ p, .nav {
   .header__logo-link {
     display: block;
     height: 36px; }
+  .header__btn {
+    position: relative;
+    display: block;
+    width: 238px;
+    height: 48px;
+    margin-right: 70px;
+    padding-right: 35px;
+    background-color: inherit;
+    border: 1px solid #03839e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #121212;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    cursor: pointer; }
+    .header__btn:after {
+      content: "";
+      position: absolute;
+      top: calc(50% - (10px / 2));
+      left: calc(50% + 35px);
+      display: block;
+      width: 25px;
+      height: 10px;
+      background: url(../images/header/arrow.svg) center no-repeat; }
+    .header__btn:hover {
+      background-color: #ffe339; }
   .header__logo {
     width: 133px;
     height: 36px; }
@@ -322,7 +349,12 @@ p, .nav {
     .header__burger-btn {
       display: block; }
     .header__basket, .header__nav {
-      display: none; } }
+      display: none; }
+    .header__btn {
+      border: none;
+      background-color: #ffe339; }
+      .header__btn:hover {
+        background-color: inherit; } }
   @media screen and (max-width: 720px) {
     .header__top-menu {
       margin-bottom: 360px; }
@@ -377,78 +409,6 @@ p, .nav {
 @media screen and (max-width: 1280px) {
   .nav__item:not(:last-child) {
     margin-right: 25px; } }
-
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: bold;
-  letter-spacing: 0.12em; }
-
-
-h1 {
-  font-size: 64px;
-  line-height: 1;
-  color: #03839e; }
-
-
-h2 {
-  font-size: 58px;
-  color: #03839e; }
-
-
-h3 {
-  font-size: 36px; }
-
-
-h4 {
-  font-size: 24px; }
-
-p, .nav {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #4f4f4f; }
-
-@media screen and (max-width: 720px) {
-  
-  h1 {
-    font-size: 36px; } }
-
-.button {
-  position: relative;
-  display: block;
-  width: 238px;
-  height: 48px;
-  padding-right: 35px;
-  background-color: inherit;
-  border: 1px solid #03839e;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #121212;
-  cursor: pointer; }
-  .button:after {
-    content: "";
-    position: absolute;
-    top: calc(50% - (10px / 2));
-    left: calc(50% + 35px);
-    display: block;
-    width: 25px;
-    height: 10px;
-    background: url(../images/header/arrow.svg) center no-repeat; }
-  .button--header {
-    margin-right: 70px;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s; }
-    .button--header:hover {
-      background-color: #ffe339; }
-  @media screen and (max-width: 780px) {
-    .button {
-      border: none;
-      background-color: #ffe339; }
-      .button:hover {
-        background-color: inherit; } }
 
 .mob-menu {
   font-family: "Montserrat", sans-serif;
@@ -1153,6 +1113,7 @@ p, .nav {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 1440px;
+  min-width: 0;
   max-height: 1083px;
   /* stylelint-disable-next-line */
   background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), color-stop(30.93%, rgba(255, 255, 255, 0))), url(../images/main/materials.png);
@@ -1251,51 +1212,6 @@ p, .nav {
     .materials__hidden-text--fourth {
       bottom: 37%;
       left: 63%; }
-  .materials .slider {
-    display: none;
-    width: 100%;
-    min-height: 160px;
-    padding: 20px;
-    margin-top: 150px;
-    background: rgba(0, 0, 0, 0.45);
-    mix-blend-mode: normal;
-    -webkit-box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
-    -webkit-backdrop-filter: blur(34px);
-            backdrop-filter: blur(34px); }
-    .materials .slider__text {
-      font-size: 16px;
-      line-height: 150%;
-      color: #f8f8f8; }
-    .materials .slider__btn {
-      width: 7px;
-      height: 7px;
-      margin-right: 7px;
-      background-image: url(../images/main/slider-btn.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      cursor: pointer; }
-      .materials .slider__btn--active {
-        background-image: url(../images/main/slider-btn-active.svg); }
-    @media screen and (max-width: 720px) {
-      .materials .slider {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
-    @media screen and (max-width: 500px) {
-      .materials .slider__text {
-        font-size: 14px; } }
   @media screen and (max-width: 1280px) {
     .materials {
       max-width: 1280px;
@@ -1336,7 +1252,8 @@ p, .nav {
   @media screen and (max-width: 720px) {
     .materials {
       background-size: contain;
-      padding: 35px; }
+      padding: 35px;
+      margin-bottom: 70px; }
       .materials__title {
         top: -135px;
         left: 10px;
@@ -1348,6 +1265,34 @@ p, .nav {
   @media screen and (max-width: 500px) {
     .materials {
       padding: 0; } }
+
+.materials .swiper-container {
+  display: none;
+  max-width: 80%;
+  bottom: -100px;
+  height: 185px;
+  background: rgba(0, 0, 0, 0.45);
+  mix-blend-mode: normal;
+  -webkit-backdrop-filter: blur(34px);
+          backdrop-filter: blur(34px); }
+  @media screen and (max-width: 720px) {
+    .materials .swiper-container {
+      display: block; } }
+  @media screen and (max-width: 500px) {
+    .materials .swiper-container {
+      max-width: 100%; } }
+
+.materials .swiper-slide {
+  padding: 35px 45px; }
+
+.materials .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  background-image: url(../images/main/slider-btn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .size {
   padding: 100px 135px; }
@@ -1677,7 +1622,7 @@ p, .nav {
     display: block;
     position: absolute;
     top: -107px;
-    right: -60px;
+    right: 0;
     width: 210px;
     height: 180px;
     background-image: url(../images/main/mail-stamp.png); }
@@ -1873,7 +1818,9 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .main {
   max-width: 1440px;
