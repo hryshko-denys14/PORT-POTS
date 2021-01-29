@@ -10,6 +10,7 @@
       sizes="32x32"
     >
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
@@ -89,14 +90,14 @@
         <div class="header__middle">
           <div class="header__description">
             <h1 class="header__headline">
-              <text class="header__opacity-text">POTR &#126; Eco, self-</text>watering, origami
-              <text class="header__opacity-text">plant</text> pots
+              <span class="header__opacity-text">POTR &#126; Eco, self-</span>watering, origami
+              <span class="header__opacity-text">plant</span> pots
             </h1>
             <div class="header__price">
               <div class="header__amount">&#36; 7,50</div>
               <span class="header__promotion">Get the second order in half price</span>
             </div>
-            <button class="button button--header">Buy now</button>
+            <button class="header__btn">Buy now</button>
           </div>
             <img
             src="images/header/cactus.png"
@@ -181,7 +182,7 @@
         </div>
       </section>
       <section class="features container" id="features">
-        <h2 class="features__title">POTR Pots <text class="features__opacity-text">Features</text></h2>
+        <h2 class="features__title">POTR Pots <span class="features__opacity-text">Features</span></h2>
         <div class="features__items">
           <div class="features__item">
             <img
@@ -247,8 +248,8 @@
         <div class="materials__text-wrapper">
           <h3 class="materials__semi-title">Environmentally friendly</h3>
           <p class="materials__description">All materials used in our pots are made from
-            <text class="materials__description--emphasize"> 100% recycled materials</text>
-             and are <text class="materials__description--emphasize">100% recyclable at the end of life</text>
+            <span class="materials__description--emphasize"> 100% recycled materials</span>
+             and are <span class="materials__description--emphasize">100% recyclable at the end of life</span>
             (should you ever choose to get rid of your POTR!). All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.</p>
         </div>
         <button class="materials__circle materials__circle--first"></button>
@@ -271,42 +272,19 @@
         <div class="materials__hidden-text materials__hidden-text--fourth">
           We have chosen Bobbiny recycled cotton cord to use as our draw string and wicking cord. Not only is it 100% recycled, it looks great and works really well at wicking water.
         </div>
-        <div class="materials__slider slider">
-          <div class="slider__content">
-            <p class="slider__text">We have chosen Bobbiny recycled cotton cord to use as our draw string and wicking cord. Not only is it 100% recycled, it looks great and works really well at wicking water. </p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.
+            </div>
+            <div class="swiper-slide">
+              We have chosen Bobbiny recycled cotton cord to use as our draw string and wicking cord. Not only is it 100% recycled, it looks great and works really well at wicking water.
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+
           </div>
-          <div class="slider__control-panel">
-            <button
-              id="first"
-              class="slider__btn slider__btn--active"
-              onclick="changeText(this.id)"
-            >
-            </button>
-            <button
-              id="second"
-              class="slider__btn"
-              onclick="changeText(this.id)"
-            >
-            </button>
-            <button
-              id="third"
-              class="slider__btn"
-              onclick="changeText(this.id)"
-            >
-            </button>
-            <button
-              id="fourth"
-              class="slider__btn"
-              onclick="changeText(this.id)"
-            >
-            </button>
-            <button
-              id="fifth"
-              class="slider__btn"
-              onclick="changeText(this.id)"
-            >
-            </button>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="size">
@@ -513,6 +491,7 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

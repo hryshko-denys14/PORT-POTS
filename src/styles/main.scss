@@ -6,7 +6,6 @@
 //header
 @import "header";
 @import "nav";
-@import "button";
 @import "mob-menu";
 
 //main
@@ -33,6 +32,8 @@ html {
 
 body {
   background: $mobile-menu-text;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main {

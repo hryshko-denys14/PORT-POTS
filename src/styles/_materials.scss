@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  min-width: 0;
   max-height: 1083px;
   /* stylelint-disable-next-line */
   background: linear-gradient(180deg, $mobile-menu-text 0%, rgba(255, 255, 255, 0) 30.93%), url(../images/main/materials.png);
@@ -150,54 +151,6 @@
     }
   }
 
-  .slider {
-    display: none;
-    width: 100%;
-    min-height: 160px;
-    padding: 20px;
-    margin-top: 150px;
-
-    background: rgba(0, 0, 0, 0.45);
-    mix-blend-mode: normal;
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(34px);
-
-    &__text {
-      font-size: 16px;
-      line-height: 150%;
-      color: #f8f8f8;
-    }
-
-    &__btn {
-      width: 7px;
-      height: 7px;
-      margin-right: 7px;
-
-      background-image: url(../images/main/slider-btn.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      cursor: pointer;
-      &--active {
-        background-image: url(../images/main/slider-btn-active.svg);
-      }
-    }
-
-    @media screen and (max-width: $fifth-break-point) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media screen and (max-width: $seventh-break-point) {
-      &__text {
-        font-size: 14px;
-      }
-    }
-  }
-
   @media screen and (max-width: $second-break-point) {
     max-width: 1280px;
     max-height: 1283px;
@@ -256,6 +209,7 @@
   @media screen and (max-width: $fifth-break-point) {
     background-size: contain;
     padding: 35px;
+    margin-bottom: 70px;
 
     &__title {
       top: -135px;
@@ -275,4 +229,38 @@
   @media screen and (max-width: $seventh-break-point) {
     padding: 0;
   }
+}
+
+.materials .swiper-container {
+  display: none;
+  max-width: 80%;
+  bottom: -100px;
+  height: 185px;
+
+  background: rgba(0, 0, 0, 0.45);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(34px);
+
+  @media screen and (max-width: $fifth-break-point) {
+    display: block;
+  }
+
+  @media screen and (max-width: $seventh-break-point) {
+    max-width: 100%;
+  }
+}
+
+.materials .swiper-slide {
+  padding: 35px 45px;
+}
+
+.materials .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+
+  background-image: url(../images/main/slider-btn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

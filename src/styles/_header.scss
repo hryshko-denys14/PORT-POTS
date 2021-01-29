@@ -67,6 +67,45 @@
     height: 36px;
   }
 
+  &__btn {
+    position: relative;
+    display: block;
+
+    width: 238px;
+    height: 48px;
+    margin-right: 70px;
+    padding-right: 35px;
+
+    background-color: inherit;
+    border: 1px solid $turquoise-color;
+
+    font-family: $main-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $button-color;
+
+    transition: background-color $transition-time;
+
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(50% - (10px / 2));
+      left: calc(50% + 35px);
+      display: block;
+
+      width: 25px;
+      height: 10px;
+
+      background: url(../images/header/arrow.svg) center no-repeat;
+    }
+
+    &:hover {
+      background-color: $yellow-color;
+    }
+  }
+
   &__logo {
     width: 133px;
     height: 36px;
@@ -207,6 +246,15 @@
     &__basket,
     &__nav {
       display: none;
+    }
+
+    &__btn {
+      border: none;
+      background-color: $yellow-color;
+
+      &:hover {
+        background-color: inherit;
+      }
     }
   }
 
