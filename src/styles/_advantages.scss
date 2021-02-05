@@ -265,6 +265,7 @@
 
     &__features {
       justify-items: flex-start;
+      grid-gap: 15px 0;
     }
 
     &__feature {
@@ -278,6 +279,10 @@
     &__btn {
       background: $yellow-color;
       border: none;
+    }
+
+    &__text {
+      max-width: 280px;
     }
   }
 }

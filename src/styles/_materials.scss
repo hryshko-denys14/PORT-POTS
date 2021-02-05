@@ -14,6 +14,7 @@
   padding: 135px;
 
   &__title {
+    width: 100%;
     position: relative;
     top: -335px;
     font-size: 139px;
@@ -194,7 +195,7 @@
     &__title {
       top: -350px;
       left: -65px;
-      max-width: 700px;
+      max-width: 500px;
       font-size: 58px;
       line-height: 58px;
     }
@@ -214,7 +215,7 @@
     &__title {
       top: -135px;
       left: 10px;
-      max-width: 100%;
+      max-width: 360px;
     }
 
     &__text-wrapper {
@@ -228,6 +229,14 @@
 
   @media screen and (max-width: $seventh-break-point) {
     padding: 0;
+
+    &__title {
+      max-width: 320px;
+      left: 0;
+
+      font-size: 48px;
+      line-height: 48px;
+    }
   }
 }
 

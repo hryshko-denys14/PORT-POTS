@@ -299,5 +299,26 @@
     &::after {
       background-color: transparent;
     }
+
+    &__top-menu {
+      padding: 0 20px;
+    }
+
+    &__description {
+      padding: 0 20px;
+      max-width: 320px;
+    }
+
+    &__btn {
+      margin-right: 0;
+    }
+
+    &__img {
+      right: calc(50% - 160px);
+    }
+
+    &__link {
+      left: 93%;
+    }
   }
 }

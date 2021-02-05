@@ -16,4 +16,8 @@
   @media screen and (max-width: $fourth-break-point) {
     margin: 15px 30px;
   }
+
+  @media screen and (max-width: $seventh-break-point) {
+    margin: 15px 0;
+  }
 }
